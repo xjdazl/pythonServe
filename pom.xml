@@ -41,7 +41,9 @@
             <version>1.0.0</version>
             <configuration>
                 <!-- ${project.artifactId}：即artifactId，myservice1-docker ${project.version}:即version，1.0-SNAPSHOT -->
-                <imageName>${project.artifactId}:${project.version}</imageName><!-- 镜像名称 -->
+                <imageName>192.168.63.187:5000/${project.artifactId}:${project.version}</imageName><!-- 镜像名称 -->
+                <pushImage>true</pushImage>
+                <registryUrl>192.168.63.187:5000</registryUrl>
                 <dockerDirectory>${basedir}/src/main/docker</dockerDirectory><!-- Dockerfile文件地址 -->
                 <resources>
                     <resource>
